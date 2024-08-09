@@ -17,9 +17,9 @@ void lecturaDeProductos(const char* nomProductos,
         exit(1);
     }
     //Variables
-    char **bufferProductos[200],c;
-    int bufferStock[200], cantDatos = 0;
-    double bufferPrecios[200]; 
+    char **bufferProductos[200]{},c;
+    int bufferStock[200]{}, cantDatos = 0;
+    double bufferPrecios[200]{}; 
     while(true){
         bufferProductos[cantDatos] = new char*[2];
         bufferProductos[cantDatos][0] = lecturaExacta(arch,',');
@@ -87,8 +87,8 @@ void lecturaDePedidos(const char* nomPedidos,int *&fechaPedidos,
         exit(1);
     }
     //Variables
-    char **bufferCodigoPedidos[200], *code,c;
-    int bufferFechaPedidos[200], **bufferDniCantPedidos[200];
+    char **bufferCodigoPedidos[200]{}, *code,c;
+    int bufferFechaPedidos[200]{}, **bufferDniCantPedidos[200]{};
     int dd,mm,aa,fecha,dni,cant,cantDatos = 0;
     while(true){
         code = lecturaExacta(arch,',');
@@ -104,7 +104,11 @@ void lecturaDePedidos(const char* nomPedidos,int *&fechaPedidos,
     dniCantPedidos = new int**[cantDatos+1]{};
     codigoPedidos = new char**[cantDatos+1]{};
     fechaPedidos = new int[cantDatos+1]{};
-    
+    for (int i = 0; i < cantDatos; i++){
+        dniCantPedidos[i] = bufferDniCantPedidos[i];
+        codigoPedidos[i]  = bufferCodigoPedidos[i]; 
+        fechaPedidos[i]   = bufferFechaPedidos[i];
+    }
 }
 void ingresarDatos(char ***bufferCodigoPedidos,int ***bufferDniCantPedidos,
                    int *bufferFechaPedidos,int &cantDatos,char *code,
@@ -121,8 +125,8 @@ void ingresarDatos(char ***bufferCodigoPedidos,int ***bufferDniCantPedidos,
     }else ingresarPedido(bufferDniCantPedidos[posFecha],bufferCodigoPedidos[posFecha],
                          code,cant,dni);
 }
-void comprimirPedidos(char ***&bufferCodigoPedidos,
-                      int ***&bufferDniCantPedidos){
+void comprimirPedidos(char ***bufferCodigoPedidos,
+                      int ***bufferDniCantPedidos){
     //Variables
     int cantDatos = 0; 
     for (size_t i = 0; bufferCodigoPedidos[i]; i++){
@@ -161,5 +165,105 @@ void ingresarPedido(int **bufferDniCantPedidos,char** bufferCodigoPedidos,
 }
 void pruebaDeLecturaDePedidos(const char* nomReporte,int *fechaPedidos,
                               char ***codigoPedidos,int ***dniCantPedidos){
-
+    ofstream report(nomReporte,ios::out);
+    if(not report.is_open()){
+        cout<<"ERROR:No se puede abrir "<<nomReporte<<endl;
+        exit(1);
+    }
+    report.precision(2); report<<fixed; encabezadoPedidos(report);
+    for (int i = 0;fechaPedidos[i]; i++){
+        report<<left<<"FECHA: "<<setw(10)<<fechaPedidos[i]<<endl;
+        linea(report,MAX_LINEA,'-');
+        encabezadoPedidos2(report);
+        for (int k = 0; codigoPedidos[i][k]; k++){
+            report<<right<<setw(2)<<setfill('0')<<k+1<<") "
+                  <<left<<setfill(' ')<<setw(10)<<codigoPedidos[i][k]
+                  <<setw(15)<<dniCantPedidos[i][k][0]
+                  <<setw(10)<<dniCantPedidos[i][k][1]<<endl;
+        }   
+        linea(report,MAX_LINEA,'=');
+    }        
 }
+void encabezadoPedidos(ofstream& report){
+    report<<setw(50)<<"REPORTE DE PEDIDOS"<<endl;
+    linea(report,MAX_LINEA,'=');
+}
+void encabezadoPedidos2(ofstream& report){
+    report<<left<<setw(4)<<" "<<setw(13)<<"CODIGO"
+          <<setw(11)<<"DNI"<<"CANT"<<endl;
+    linea(report,MAX_LINEA,'-');
+}
+void reporteDeEnvioDePedidos(const char* nomReporte,char*** productos,
+                             int *&stock,double *precios,int *fechaPedidos,
+                             char ***codigoPedidos,int ***dniCantPedidos){
+    ofstream report(nomReporte,ios::out);
+    if(not report.is_open()){
+        cout<<"ERROR: No se pudo abrir "<<nomReporte<<endl;
+        exit(1);
+    }
+    //Variables
+    double ingreso,descuento,totalIngreso = 0,totalDescuento = 0;
+    int posProducto;
+    report.precision(2); report<<fixed; encabezado(report);
+    for (int i = 0; fechaPedidos[i]; i++){
+        imprimirFecha(report,fechaPedidos[i]); ingreso = 0;
+        encabezado2(report); descuento = 0;
+        for (int k = 0; codigoPedidos[i][k]; k++){
+            posProducto = buscarProducto(productos,codigoPedidos[i][k]);
+            report<<right<<setw(2)<<setfill('0')<<k+1<<") "
+                  <<left<<setfill(' ')<<setw(12)<<dniCantPedidos[i][k][0]
+                  <<setw(10)<<codigoPedidos[i][k]
+                  <<setw(61)<<productos[posProducto][1]
+                  <<setw(6)<<dniCantPedidos[i][k][1]<<right
+                  <<setw(10)<<precios[posProducto];
+            if(stock[posProducto]-dniCantPedidos[i][k][1]>=0){
+                report<<setw(17)<<precios[posProducto]*
+                                  dniCantPedidos[i][k][1]<<endl;
+                stock[posProducto]-=dniCantPedidos[i][k][1];
+                ingreso +=precios[posProducto]*dniCantPedidos[i][k][1];
+            }else{
+                report<<setw(17)<<"SIN STOCK"<<endl;
+                descuento +=precios[posProducto]*dniCantPedidos[i][k][1];
+            } 
+        }
+        totalIngreso += ingreso; totalDescuento +=descuento;
+        linea(report,MAX_LINEA,'-');
+        report<<left<<setw(60)<<"Total ingresado:"<<ingreso<<endl
+              <<setw(60)<<"Total perdido por falta de stock:"<<descuento<<endl;
+        linea(report,MAX_LINEA,'=');
+    }
+    report<<"Resumen de ingresos:"<<endl
+          <<setw(60)<<"Total de ingressos en periodo:"<<totalIngreso<<endl
+          <<setw(60)<<"Total perdido por falta de stock:"<<totalDescuento<<endl;
+    linea(report,MAX_LINEA,'=');
+    
+}
+int buscarProducto(char ***productos,char* codigoPedidos){
+    for (int i = 0;productos[i]; i++)
+        if(strcmp(productos[i][0],codigoPedidos)==0)return i;
+    return NO_ENCONTRADO;
+}
+void encabezado(ofstream& report){
+    report<<setw(50)<<"REPORTE DE ENTREGA DE PEDIDOS"<<endl;
+    linea(report,MAX_LINEA,'=');
+}
+void imprimirFecha(ofstream& report,int fecha){
+    //Variables
+    int aa = fecha/10000;
+    fecha -= aa*10000; 
+    int mm = fecha/100;
+    fecha -= mm*100;
+    int dd = fecha;
+    report<<"FECHA: "<<right<<setw(2)<<setfill('0')<<dd<<"/"<<setw(2)
+          <<mm<<"/"<<setw(4)<<aa<<setfill(' ')<<endl<<left;
+    linea(report,MAX_LINEA,'=');
+}
+void encabezado2(ofstream& report){
+    report<<left<<setw(5)<<"No."<<setw(15)<<"DNI"
+          <<setw(63)<<"PRODUCTO"
+          <<setw(14)<<"CANTIDAD"
+          <<setw(10)<<"PRECIO"
+          <<setw(10)<<"TOTAL DE INGRESOS"<<endl;
+    linea(report,MAX_LINEA,'-');
+}
+

@@ -18,7 +18,12 @@ int main(){
     lecturaDePedidos("docs/Pedidos.csv",fechaPedidos,codigoPedidos,
                      dniCantPedidos);
     pruebaDeLecturaDePedidos("docs/ReporteDePedidos.txt",fechaPedidos,
-                              codigoPedidos,dniCantPedidos);
+                              codigoPedidos,dniCantPedidos);\
+    reporteDeEnvioDePedidos("docs/ReporteDeEntregaDePedidos.txt",productos,
+                            stock,precios,fechaPedidos,codigoPedidos,
+                            dniCantPedidos);
+    preubaDeLecturaDeProductos("docs/ReporteDeProductosFinal.txt",
+                               productos,stock,precios); 
 
     return 0;
 }

@@ -21,6 +21,16 @@ void ingresarDatos(char ***bufferCodigoPedidos,int ***bufferDniCantPedidos,
 int buscarFecha(int *bufferFechaPedidos,int fecha,int cantDatos);
 void ingresarPedido(int **bufferDniCantPedidos,char** bufferCodigoPedidos,
                     char *code,int cant,int dni);
-void comprimirPedidos(char ***&bufferCodigoPedidos,
-                      int ***&bufferDniCantPedidos);
+void comprimirPedidos(char ***bufferCodigoPedidos,
+                      int ***bufferDniCantPedidos);
+void reporteDeEnvioDePedidos(const char* nomReporte,char*** productos,
+                             int *&stock,double *precios,int *fechaPedidos,
+                             char ***codigoPedidos,int ***dniCantPedidos);
+void encabezadoPedidos(ofstream& report);
+void encabezadoPedidos2(ofstream& report);
+void encabezado(ofstream& report);
+void imprimirFecha(ofstream& report,int fecha);
+void encabezado2(ofstream& report);
+int buscarProducto(char ***productos,char* codigoPedidos);
+
 #endif
