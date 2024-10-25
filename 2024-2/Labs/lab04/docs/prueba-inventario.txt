@@ -1,0 +1,20 @@
+I001      Café Arábica              50         0kg        
+I002      Café Robusta               30         0kg        
+I003      Leche Entera                20         0kg        
+I004      Leche Descremada            15         0kg        
+I005      Leche de Almendra           10         0kg        
+I006      Chocolate en Polvo          25         0kg        
+I007      Canela Molida                5         0kg        
+I008      Vainilla Líquida            3         0kg        
+I009      Azúcar Morena              40         0kg        
+I010      Azúcar Blanca              45         0kg        
+I011      Miel de Abeja                8         0kg        
+I012      Té Verde                   12         0kg        
+I013      Té Negro                   10         0kg        
+I014      Té Rooibos                  8         0kg        
+I015      Té de Manzanilla            6         0kg        
+I016      Jengibre Fresco              4         0kg        
+I017      Cardamomo                    2         0kg        
+I018      Nuez Moscada                 1         0kg        
+I019      Clavo de Olor                1         0kg        
+I020      Lavanda Seca                 1         0kg        
