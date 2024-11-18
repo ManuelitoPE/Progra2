@@ -1,0 +1,66 @@
+============================================================
+         Informacion del posicionamiento de Libros
+             en los estantes de la Biblioteca
+============================================================
+Cantidad de Estantes: 3
+------------------------------------------------------------
+Codigo Estante:  BBB       Cantidad de Libros:    2
+Altura X Anchura: 6 x 4    Peso Maximo:           10   
+Tipo: Vertical             Peso Total:             8.3
+------------------------------------------------------------
+[ ] [ ] [ ] [ ] 
+[ ] [ ] [ ] [ ] 
+[ ] [*] [*] [*] 
+[ ] [*] [*] [*] 
+[*] [*] [*] [*] 
+[*] [*] [*] [*] 
+------------------------------------------------------------
+CODIGO    NOMBRE                       ANCHO   ALTO    PESO    
+------------------------------------------------------------
+EFG123    La enciclopedia de la Vida    2       4       6.3     
+EFG321    La enciclopedia de la Muerte  2       3       2       
+------------------------------------------------------------
+Codigo Estante:  AAA       Cantidad de Libros:    2
+Altura X Anchura: 4 x 6    Peso Maximo:           3    
+Tipo: Horizontal           Peso Total:            1.75
+------------------------------------------------------------
+[*] [*] [*] [*] [*] [*] 
+[*] [*] [*] [*] [*] [*] 
+[*] [*] [*] [*] [*] [*] 
+[*] [*] [*] [*] [*] [*] 
+------------------------------------------------------------
+CODIGO    NOMBRE                       ANCHO   ALTO    PESO    
+------------------------------------------------------------
+ABC321    El libro de la Costa          2       4       1       
+CBA123    El libro de la Sierra         4       4       0.75    
+------------------------------------------------------------
+Codigo Estante:  CCC       Cantidad de Libros:    1
+Altura X Anchura: 8 x 10   Peso Maximo:           1    
+Tipo: Horizontal           Peso Total:            0.75
+------------------------------------------------------------
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+[*] [*] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+[*] [*] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+[*] [*] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+[*] [*] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+[*] [*] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] 
+------------------------------------------------------------
+CODIGO    NOMBRE                       ANCHO   ALTO    PESO    
+------------------------------------------------------------
+ABC123    El libro de la Selva          2       5       0.75    
+
+
+============================================================
+
+         Informacion de todos los libros
+------------------------------------------------------------
+Cantidad de Libros Total:7
+EFG123    La enciclopedia de la Vida    2       4       6.3     
+EFG321    La enciclopedia de la Muerte  2       3       2       
+EFG333    NO SE COLOCO                  6       6       8.7     
+ABC123    El libro de la Selva          2       5       0.75    
+ABC321    El libro de la Costa          2       4       1       
+CBA123    El libro de la Sierra         4       4       0.75    
+CBA321    NO SE COLOCO                  2       7       1.5     
