@@ -1,21 +1,25 @@
-#ifndef ESTANTE_H
-#define ESTANTE_H
+#ifndef ESTANTES_H
+#define ESTANTES_H
 
-class Estante{
-private:
-    /* data */
+#include "Lista.h"
+
+class Estantes {
 public:
-    Estante(/* args */);
-    ~Estante();
+    Estantes();
+    Estantes(const Estantes& orig);
+    virtual ~Estantes();
+    void SetCapacidad(double capacidad);
+    double GetCapacidad() const;
+    void SetId(int id);
+    int GetId() const;
+    void SetClase(char clase);
+    char GetClase() const;
+private:
+    char clase;
+    int id;
+    double capacidad;
+    Lista Llibros;
 };
 
-Estante::Estante(/* args */)
-{
-}
+#endif /* ESTANTES_H */
 
-Estante::~Estante()
-{
-}
-
-
-#endif
