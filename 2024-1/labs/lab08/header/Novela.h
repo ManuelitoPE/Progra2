@@ -2,22 +2,20 @@
 #ifndef NOVELA_H
 #define NOVELA_H
 
-class Novela
-{
-private:
-    /* data */
+#include "Libro.h"
+
+class Novela : public Libro{
 public:
-    Novela(/* args */);
-    ~Novela();
+    Novela();
+    Novela(const Novela& orig);
+    virtual ~Novela();
+    void SetAutor(const char* autor);
+    void GetAutor(char* autor) const;
+private:
+    char* autor;
 };
 
-Novela::Novela(/* args */)
-{
-}
-
-Novela::~Novela()
-{
-}
+#endif /* NOVELA_H */
 
 
-#endif
+
