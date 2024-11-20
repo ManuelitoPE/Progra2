@@ -1,18 +1,22 @@
 //Author: MAKO
-#ifndef BIBLIOTECA_H 
+#ifndef BIBLIOTECA_H
 #define BIBLIOTECA_H
 
-class Biblioteca{
-private:
-    /* data */
+#include "Estantes.h"
+
+class Biblioteca {
 public:
-    Biblioteca(/* args */);
-    ~Biblioteca();
+    Biblioteca();
+    Biblioteca(const Biblioteca& orig);
+    virtual ~Biblioteca();
     void carga();
     void llena();
     void baja();
     void muestra();
+    
+private:
+    Estantes AEstantes[10];
 };
 
+#endif /* BIBLIOTECA_H */
 
-#endif
