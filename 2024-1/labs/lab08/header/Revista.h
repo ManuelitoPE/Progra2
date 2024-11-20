@@ -2,22 +2,27 @@
 #ifndef REVISTA_H
 #define REVISTA_H
 
-class Revista
-{
-private:
-    /* data */
+#include "Libro.h"
+
+class Revista : public Libro{
 public:
-    Revista(/* args */);
-    ~Revista();
+    Revista();
+    Revista(const Revista& orig);
+    virtual ~Revista();
+    void SetVigencia(int vigencia);
+    int GetVigencia() const;
+    void SetNumero(int numero);
+    int GetNumero() const;
+    void SetAnho(int anho);
+    int GetAnho() const;
+    void SetISSN(int ISSN);
+    int GetISSN() const;
+private:
+    int ISSN;
+    int anho;
+    int numero;
+    int vigencia;
 };
 
-Revista::Revista(/* args */)
-{
-}
+#endif /* REVISTA_H */
 
-Revista::~Revista()
-{
-}
-
-
-#endif
