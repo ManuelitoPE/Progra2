@@ -1,23 +1,17 @@
-//Author: MAKO
 #ifndef NODO_H
 #define NODO_H
 
-class Nodo
-{
-private:
-    /* data */
+#include "Libro.h"
+
+class Nodo {
 public:
-    Nodo(/* args */);
-    ~Nodo();
+    Nodo();
+    Nodo(const Nodo& orig);
+    virtual ~Nodo();
+private:
+    Libro* plibro;
+    Nodo* sig;
 };
 
-Nodo::Nodo(/* args */)
-{
-}
+#endif /* NODO_H */
 
-Nodo::~Nodo()
-{
-}
-
-
-#endif
