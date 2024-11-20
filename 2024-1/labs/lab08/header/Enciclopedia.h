@@ -2,22 +2,24 @@
 #ifndef ENCICLOPEDIA_H
 #define ENCICLOPEDIA_H
 
-class Enciclopedia
-{
-private:
-    /* data */
+#include "Libro.h"
+
+class Enciclopedia: public Libro {
 public:
-    Enciclopedia(/* args */);
-    ~Enciclopedia();
+    Enciclopedia();
+    Enciclopedia(const Enciclopedia& orig);
+    virtual ~Enciclopedia();
+    void SetVigencia(int vigencia);
+    int GetVigencia() const;
+    void SetAnho(int anho);
+    int GetAnho() const;
+    void SetSku(int sku);
+    int GetSku() const;
+private:
+    int sku;
+    int anho;
+    int vigencia;
 };
 
-Enciclopedia::Enciclopedia(/* args */)
-{
-}
+#endif /* ENCICLOPEDIA_H */
 
-Enciclopedia::~Enciclopedia()
-{
-}
-
-
-#endif
