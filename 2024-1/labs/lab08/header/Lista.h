@@ -1,22 +1,17 @@
 #ifndef LISTA_H
 #define LISTA_H
 
-class Lista
-{
-private:
-    /* data */
+#include "Nodo.h"
+
+class Lista {
 public:
-    Lista(/* args */);
-    ~Lista();
+    Lista();
+    Lista(const Lista& orig);
+    virtual ~Lista();
+private:
+    double peso;
+    Nodo* ini;
 };
 
-Lista::Lista(/* args */)
-{
-}
+#endif /* LISTA_H */
 
-Lista::~Lista()
-{
-}
-
-
-#endif
