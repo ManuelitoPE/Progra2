@@ -1,6 +1,5 @@
 //Author: MAKO
 #include "header/Lista.h"
-#include "Lista.h"
 
 Lista::Lista() {
     peso = {};
