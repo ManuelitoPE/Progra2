@@ -11,6 +11,10 @@ public:
     virtual ~Novela();
     void SetAutor(const char* autor);
     void GetAutor(char* autor) const;
+    void operator=(const Novela& orig);
+    void lee(ifstream& arch);
+    void actualiza();
+    void imprime(ofstream& arch);
 private:
     char* autor;
 };

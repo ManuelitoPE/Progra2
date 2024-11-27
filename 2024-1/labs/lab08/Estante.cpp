@@ -1,40 +1,71 @@
 //Author: MAKO
 #include "header/Estante.h"
 
-Estantes::Estantes() {
-    clase = {};
-    id = {};
-    capacidad = {};
-    Llibros = {};
+Estante::Estante() {
+    clase       = {};
+    id          = {};
+    capacidad   = {};
+    Llibros     = {};
 }
 
-Estantes::Estantes(const Estantes& orig) {
+Estante::Estante(const Estante& orig) {
 }
 
-Estantes::~Estantes() {
+Estante::~Estante() {
 }
 
-void Estantes::SetCapacidad(double capacidad) {
+void Estante::SetCapacidad(double capacidad) {
     this->capacidad = capacidad;
 }
 
-double Estantes::GetCapacidad() const {
+double Estante::GetCapacidad() const {
     return capacidad;
 }
 
-void Estantes::SetId(int id) {
+void Estante::SetId(int id) {
     this->id = id;
 }
 
-int Estantes::GetId() const {
+int Estante::GetId() const {
     return id;
 }
 
-void Estantes::SetClase(char clase) {
+void Estante::SetClase(char clase) {
     this->clase = clase;
 }
 
-char Estantes::GetClase() const {
+char Estante::GetClase() const {
     return clase;
 }
 
+bool Estante::lee(ifstream& arch){
+    arch>>clase;
+    if(arch.eof())return false;
+    arch.ignore();  arch>>id;
+    arch.ignore();  arch>>capacidad;
+    arch.ignore();
+    return true;
+}
+
+void Estante::imprime(ofstream& arch){
+    arch<<"Estantes:"<<endl;
+    linea(arch,MAX_LINEA,'=');
+    arch<<"Id:"<<id<<endl
+        <<"Tipo"<<clase<<endl
+        <<"Capacidad:"<<capacidad<<endl
+        <<"Libros Contenidos: "<<endl;
+    linea(arch,MAX_LINEA,'=');
+    Llibros.imprime(arch);
+}
+
+bool Estante::insertar(Libro* libro){
+    if(capacidad >= Llibros.getPeso()+libro->GetPeso()){
+        Llibros.insertar(libro);
+        return true;
+    }
+    return false;
+}
+
+void Estante::actualiza(){
+    Llibros.actualiza();
+}

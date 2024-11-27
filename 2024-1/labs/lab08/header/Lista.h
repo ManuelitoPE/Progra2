@@ -8,6 +8,11 @@ public:
     Lista();
     Lista(const Lista& orig);
     virtual ~Lista();
+    void setPeso(const double);
+    double getPeso() const;
+    void insertar(Libro* libro);
+    void actualiza();
+    void imprime(ofstream& arch);
 private:
     double peso;
     Nodo* ini;

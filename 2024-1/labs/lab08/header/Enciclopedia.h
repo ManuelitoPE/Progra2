@@ -15,6 +15,10 @@ public:
     int GetAnho() const;
     void SetSku(int sku);
     int GetSku() const;
+    void operator=(const Enciclopedia& orig);
+    void lee(ifstream& arch);
+    void actualiza();
+    void imprime(ofstream& arch);
 private:
     int sku;
     int anho;

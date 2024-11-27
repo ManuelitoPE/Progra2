@@ -19,7 +19,10 @@ public:
     void SetNombre(const char* nombre);
     void GetNombre(char* nombre) const;
     void operator=(const Libro& libro);
-
+    
+    virtual void lee(ifstream& arch);
+    virtual void actualiza() = 0;
+    virtual void imprime(ofstream& arch);
 private:
     char* nombre;
     int paginas;

@@ -14,6 +14,12 @@ Enciclopedia::Enciclopedia(const Enciclopedia& orig):Libro(orig) {
 Enciclopedia::~Enciclopedia() {
 }
 
+void Enciclopedia::operator=(const Enciclopedia& orig){
+    Libro::operator=(orig);
+    sku  = orig.GetSku();
+    anho = orig.GetAnho();
+    vigencia = orig.GetVigencia();
+}
 void Enciclopedia::SetVigencia(int vigencia) {
     this->vigencia = vigencia;
 }
@@ -38,3 +44,19 @@ int Enciclopedia::GetSku() const {
     return sku;
 }
 
+void Enciclopedia::lee(ifstream& arch){
+    Libro::lee(arch);
+    arch>>sku;      arch.ignore();
+    arch>>anho;     arch.ignore();
+}
+
+void Enciclopedia::actualiza(){
+    if(anho<=2020)vigencia = 0;
+}
+
+void Enciclopedia::imprime(ofstream& arch){
+    Libro::imprime(arch);
+    arch<<"SKU: "<<sku<<setw(5)<<" "
+        <<"Ano: "<<anho<<setw(5)<<" "
+        <<"Vigencia: "<<vigencia<<endl;
+}

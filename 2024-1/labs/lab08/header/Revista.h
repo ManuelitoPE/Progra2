@@ -17,6 +17,10 @@ public:
     int GetAnho() const;
     void SetISSN(int ISSN);
     int GetISSN() const;
+    void operator=(const Revista& orig);
+    void lee(ifstream& arch);
+    void actualiza();
+    void imprime(ofstream& arch);
 private:
     int ISSN;
     int anho;

@@ -2,9 +2,9 @@
 #include "header/Revista.h" 
 
 Revista::Revista() {
-    ISSN = {};
-    anho = {};
-    numero = {};
+    ISSN    = {};
+    anho    = {};
+    numero  = {};
     vigencia = 1;
 }
 
@@ -13,6 +13,14 @@ Revista::Revista(const Revista& orig):Libro(orig){
 }
 
 Revista::~Revista() {
+}
+
+void Revista::operator=(const Revista& orig){
+    Libro::operator=(orig);
+    ISSN = orig.GetISSN();
+    anho = orig.GetAnho();
+    numero = orig.GetNumero();
+    vigencia = orig.GetVigencia();
 }
 
 void Revista::SetVigencia(int vigencia) {
@@ -47,3 +55,21 @@ int Revista::GetISSN() const {
     return ISSN;
 }
 
+void Revista::lee(ifstream& arch){
+    Libro::lee(arch);
+    arch>>ISSN;     arch.ignore();
+    arch>>anho;     arch.ignore();
+    arch>>numero;   arch.ignore();
+}
+
+void Revista::actualiza(){
+    if(anho<=2020)vigencia = 0;
+}
+
+void Revista::imprime(ofstream& arch){
+    Libro::imprime(arch);
+    arch<<"ISSN: "<<ISSN<<setw(5)<<" "
+        <<"Ano: "<<anho<<setw(5)<<" "
+        <<"Numero: "<<numero<<setw(5)<<" "
+        <<"Vigencia: "<<vigencia<<endl;
+}

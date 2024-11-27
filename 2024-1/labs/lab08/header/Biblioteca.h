@@ -2,7 +2,10 @@
 #ifndef BIBLIOTECA_H
 #define BIBLIOTECA_H
 
-#include "Estantes.h"
+#include "Estante.h"
+#include "Enciclopedia.h"
+#include "Novela.h"
+#include "Revista.h"
 
 class Biblioteca {
 public:
@@ -11,11 +14,12 @@ public:
     virtual ~Biblioteca();
     void carga();
     void llena();
+    void insertarLibro(Libro* libro);
     void baja();
     void muestra();
     
 private:
-    Estantes AEstantes[10];
+    Estante AEstantes[10];
 };
 
 #endif /* BIBLIOTECA_H */

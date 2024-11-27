@@ -1,19 +1,24 @@
-#ifndef ESTANTES_H
-#define ESTANTES_H
+#ifndef ESTANTE_H
+#define ESTANTE_H
 
 #include "Lista.h"
-
-class Estantes {
+#include "funciones.h"
+#define MAX_LINEA 100
+class Estante {
 public:
-    Estantes();
-    Estantes(const Estantes& orig);
-    virtual ~Estantes();
+    Estante();
+    Estante(const Estante& orig);
+    virtual ~Estante();
     void SetCapacidad(double capacidad);
     double GetCapacidad() const;
     void SetId(int id);
     int GetId() const;
     void SetClase(char clase);
     char GetClase() const;
+    bool lee(ifstream& arch);
+    bool insertar(Libro* libro);
+    void actualiza();
+    void imprime(ofstream& arch);
 private:
     char clase;
     int id;

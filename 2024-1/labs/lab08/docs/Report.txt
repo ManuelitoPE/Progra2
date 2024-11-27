@@ -1,0 +1,527 @@
+Estantes:
+====================================================================================================
+Id:1
+TipoH
+Capacidad:20
+Libros Contenidos: 
+====================================================================================================
+Titulo: Educacion
+Peso: 0.18
+ISSN: 10199403     Ano: 2024     Numero: 6     Vigencia: 1
+
+Titulo: La chica del tren
+Peso: 0.4
+Autor: Paula Hawkins
+
+Titulo: LA ENCICLOPEDIA DE LOS DINOSAURIOS
+Peso: 2
+SKU: 36225     Ano: 2018     Vigencia: 0
+
+Titulo: LA ENCICLOPEDIA DE LOS BARCOS
+Peso: 2
+SKU: 35902     Ano: 2014     Vigencia: 0
+
+Titulo: Todo se desmorona
+Peso: 0.4
+Autor: Chinua Achebe
+
+Titulo: Cien anios de soledad
+Peso: 0.5
+Autor: Gabriel Garcia Marquez
+
+Titulo: Las aventuras de Pinocho
+Peso: 0.4
+Autor: Carlo Collodi
+
+Titulo: La Iliada
+Peso: 0.5
+Autor: Homero
+
+Titulo: Confesiones de una mascara
+Peso: 0.3
+Autor: Yukio Mishima
+
+Titulo: El viejo y el mar
+Peso: 0.4
+Autor: Hernest Hemingway
+
+Titulo: El otonio del patriarca
+Peso: 0.5
+Autor: Gabriel Garcia Marquez
+
+Titulo: ENCICLOPEDIA SALVAT
+Peso: 12
+SKU: 78323     Ano: 2015     Vigencia: 0
+
+Titulo: Diamantes y pedernales
+Peso: 0.4
+Autor: Jose Maria Arguedas
+
+Estantes:
+====================================================================================================
+Id:2
+TipoV
+Capacidad:10
+Libros Contenidos: 
+====================================================================================================
+Titulo: Educacion
+Peso: 0.18
+ISSN: 10199403     Ano: 2023     Numero: 3     Vigencia: 1
+
+Titulo: Harry Potter y la Orden del Fenix ( Harry Potter 5)
+Peso: 0.5
+Autor: J. K. Rowling
+
+Titulo: Revolucion
+Peso: 0.5
+Autor: Arturo Perez-Reverte
+
+Titulo: El codigo Da Vinci
+Peso: 0.5
+Autor: Dan Brown
+
+Titulo: El nombre de la rosa
+Peso: 0.6
+Autor: Umberto Eco
+
+Titulo: Los tres mosqueteros
+Peso: 0.3
+Autor: Alejandro Dumas
+
+Titulo: El evangelio seg n Jesucristo
+Peso: 0.5
+Autor: Jose Saramago
+
+Titulo: Tormenta de espadas
+Peso: 0.4
+Autor: George R.R.Martin
+
+Titulo: Travesuras de la ninia mala
+Peso: 0.3
+Autor: Mario Vargas Llosa
+
+Titulo: Ficciones
+Peso: 0.4
+Autor: Jorge Luis Borges
+
+Titulo: El problema final
+Peso: 0.4
+Autor: Arturo Perez-Reverte
+
+Titulo: El cementerio de Praga
+Peso: 0.4
+Autor: Umberto Eco
+
+Titulo: El pendulo de Foucault
+Peso: 0.3
+Autor: Umberto Eco
+
+Titulo: Las aventuras de Sherlock Holmes
+Peso: 0.4
+Autor: Arthur Conan Doyle
+
+Titulo: El handicap de la vida
+Peso: 0.3
+Autor: Rudyard Kipling
+
+Titulo: Relato de un naufrago
+Peso: 0.4
+Autor: Gabriel Garcia Marquez
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2019     Numero: 1     Vigencia: 0
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2021     Numero: 2     Vigencia: 1
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2021     Numero: 4     Vigencia: 1
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2022     Numero: 2     Vigencia: 1
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2022     Numero: 3     Vigencia: 1
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2023     Numero: 1     Vigencia: 1
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2023     Numero: 2     Vigencia: 1
+
+Titulo: Boletin de Arqueologia PUCP
+Peso: 0.25
+ISSN: 10292004     Ano: 2023     Numero: 3     Vigencia: 1
+
+Titulo: Apocalipticos e integrados
+Peso: 0.4
+Autor: Umberto Eco
+
+Titulo: El doble
+Peso: 0.4
+Autor: Fiodor Dostoyevski
+
+Titulo: Los pilares de la tierra
+Peso: 0.3
+Autor: Ken Follett
+
+Titulo: Espania con honra
+Peso: 0.4
+Autor: Daniel Aquillue
+
+Estantes:
+====================================================================================================
+Id:3
+TipoH
+Capacidad:15
+Libros Contenidos: 
+====================================================================================================
+Titulo: Revista de Psicolog a
+Peso: 0.2
+ISSN: 12549247     Ano: 2024     Numero: 1     Vigencia: 1
+
+Titulo: Los barcos se pierden en tierra
+Peso: 0.5
+Autor: Arturo Perez-Reverte
+
+Titulo: Capitanes intrepidos
+Peso: 0.5
+Autor: Rudyard Kipling
+
+Titulo: Mil soles esplendidos
+Peso: 0.5
+Autor: Khaled Hosseini
+
+Titulo: Juego de tronos
+Peso: 0.7
+Autor: George R.R.Martin
+
+Titulo: La isla del tesoro
+Peso: 0.5
+Autor: Robert Louis Stevenson
+
+Titulo: La transformacion del mundo
+Peso: 0.5
+Autor: J rgen Osterhammel
+
+Titulo: El eterno marido
+Peso: 0.5
+Autor: Fiodor Dostoyevski
+
+Titulo: Educacion
+Peso: 0.18
+ISSN: 10199403     Ano: 2022     Numero: 3     Vigencia: 1
+
+Titulo: Educacion
+Peso: 0.18
+ISSN: 10199403     Ano: 2022     Numero: 4     Vigencia: 1
+
+Titulo: Educacion
+Peso: 0.18
+ISSN: 10199403     Ano: 2022     Numero: 5     Vigencia: 1
+
+Titulo: Educacion
+Peso: 0.18
+ISSN: 10199403     Ano: 2023     Numero: 1     Vigencia: 1
+
+Titulo: Educacion
+Peso: 0.18
+ISSN: 10199403     Ano: 2023     Numero: 2     Vigencia: 1
+
+Titulo: El perfume
+Peso: 0.5
+Autor: Patrick Suskind
+
+Titulo: En el camino
+Peso: 0.5
+Autor: Jack Kerouac
+
+Titulo: Los hombres que no amaban a las mujeres
+Peso: 0.5
+Autor: Stieg Larsson
+
+Titulo: El hombre que pudo reinar
+Peso: 0.5
+Autor: Rudyard Kipling
+
+Titulo: El Principito
+Peso: 0.4
+Autor: Antoine de Saint-Exupery
+
+Titulo: Dioses tumbas y sabios
+Peso: 0.5
+Autor: C. W. Ceram
+
+Titulo: La Eneida
+Peso: 0.5
+Autor: Virgilio
+
+Titulo: 1984
+Peso: 0.5
+Autor: George Orwell
+
+Titulo: El Hobbit
+Peso: 0.5
+Autor: J.R.R. Tolkien
+
+Titulo: Historia de la Edad Media
+Peso: 0.5
+Autor: Indro Montanelli
+
+Titulo: Cumbres borrascosas
+Peso: 0.5
+Autor: Emily Bront 
+
+Titulo: Una historia de Espania
+Peso: 0.5
+Autor: Arturo Perez-Reverte
+
+Titulo: El corazon de las tinieblas
+Peso: 0.5
+Autor: Joseph Conrad
+
+Titulo: Fortaleza digitali
+Peso: 0.5
+Autor: Dan Brown
+
+Titulo: Moby Dick
+Peso: 0.5
+Autor: Herman Melville
+
+Titulo: Un dia de colera
+Peso: 0.5
+Autor: Arturo Perez-Reverte
+
+Titulo: Paris era una fiesta
+Peso: 0.5
+Autor: Hernest Hemingway
+
+Titulo: Don Quijote de la Mancha
+Peso: 0.7
+Autor: Miguel de Cervantes
+
+Titulo: La piel del tambor
+Peso: 0.5
+Autor: Arturo Perez-Reverte
+
+Titulo: Hombres buenos
+Peso: 0.5
+Autor: Arturo Perez-Reverte
+
+Estantes:
+====================================================================================================
+Id:4
+TipoH
+Capacidad:10
+Libros Contenidos: 
+====================================================================================================
+Titulo: La tabla de Flandes
+Peso: 0.4
+Autor: Arturo Perez-Reverte
+
+Titulo: Rimas y leyendas
+Peso: 0.4
+Autor: Gustavo Adolfo Becquer
+
+Titulo: ENCICLOPEDIA VIDA SALVAJE DEL MUNDO
+Peso: 2
+SKU: 17974     Ano: 2020     Vigencia: 0
+
+Titulo: Historica
+Peso: 0.25
+ISSN: 2223375     Ano: 2019     Numero: 3     Vigencia: 0
+
+Titulo: Historica
+Peso: 0.25
+ISSN: 2223375     Ano: 2022     Numero: 1     Vigencia: 1
+
+Titulo: Historica
+Peso: 0.25
+ISSN: 2223375     Ano: 2022     Numero: 3     Vigencia: 1
+
+Titulo: Historica
+Peso: 0.25
+ISSN: 2223375     Ano: 2022     Numero: 4     Vigencia: 1
+
+Titulo: Historica
+Peso: 0.25
+ISSN: 2223375     Ano: 2022     Numero: 5     Vigencia: 1
+
+Titulo: Historica
+Peso: 0.25
+ISSN: 2223375     Ano: 2023     Numero: 1     Vigencia: 1
+
+Titulo: Historica
+Peso: 0.25
+ISSN: 2223375     Ano: 2023     Numero: 2     Vigencia: 1
+
+Titulo: Revista de Psicolog a
+Peso: 0.2
+ISSN: 12549247     Ano: 2022     Numero: 1     Vigencia: 1
+
+Titulo: Revista de Psicolog a
+Peso: 0.2
+ISSN: 12549247     Ano: 2023     Numero: 1     Vigencia: 1
+
+Titulo: Revista de Psicolog a
+Peso: 0.2
+ISSN: 12549247     Ano: 2023     Numero: 2     Vigencia: 1
+
+Titulo: Divina comedia
+Peso: 0.7
+Autor: Dante Alighieri
+
+Titulo: El francotirador paciente
+Peso: 0.5
+Autor: Arturo Perez-Reverte
+
+Titulo: Mi isla
+Peso: 0.5
+Autor: Elisabet Benavent
+
+Titulo: La ciudad y los perros
+Peso: 0.5
+Autor: Mario Vargas Llosa
+
+Titulo: Los diarios de Adan y Eva
+Peso: 0.5
+Autor: Mark Twain
+
+Titulo: Las aventuras de Huckleberry Finn
+Peso: 0.5
+Autor: Mark Twain
+
+Titulo: El Maestro y Margarita
+Peso: 0.5
+Autor: Mijail Bulgakov
+
+Titulo: Historia del siglo XX: 1914-1991
+Peso: 0.5
+Autor: Eric Hobsbawm
+
+Titulo: El guardian entre el centeno
+Peso: 0.5
+Autor: J. D. Salinger
+
+Estantes:
+====================================================================================================
+Id:5
+TipoV
+Capacidad:15
+Libros Contenidos: 
+====================================================================================================
+Titulo: Alicia en el pais de las maravillas
+Peso: 0.4
+Autor: Lewis Carroll
+
+Titulo: El conde de Montecristo
+Peso: 0.7
+Autor: Alexandre Dumas
+
+Titulo: Palmeras en la nieve
+Peso: 0.4
+Autor: Luz Gabas
+
+Titulo: Harry Potter y la piedra filosofal (Harry Potter 1)
+Peso: 0.4
+Autor: J. K. Rowling
+
+Titulo: ANIMALES: UNA EXPLORACION DEL MUNDO ZOOLOGICO
+Peso: 2.5
+SKU: 22685     Ano: 2018     Vigencia: 0
+
+Titulo: Mudlarking
+Peso: 0.4
+Autor: Lara Maiklem
+
+Titulo: Jane Eyre
+Peso: 0.4
+Autor: Charlotte Bront 
+
+Titulo: Los renglones torcidos de Dios
+Peso: 0.4
+Autor: Torcuato Luca de Tena
+
+Titulo: Un asunto de honor
+Peso: 0.4
+Autor: Arturo Perez-Reverte
+
+Titulo: Vidas intrepidas
+Peso: 0.4
+Autor: Julio Albi de la Cuesta
+
+Titulo: El reino de este mundo
+Peso: 0.4
+Autor: Alejo Carpentier
+
+Titulo: El invierno del mundo
+Peso: 0.4
+Autor: Ken Follett
+
+Titulo: El italiano
+Peso: 0.4
+Autor: Arturo Perez-Reverte
+
+Titulo: Progreso del peregrino
+Peso: 0.4
+Autor: John Bunyan
+
+Titulo: El club Dumas
+Peso: 0.7
+Autor: Arturo Perez-Reverte
+
+Titulo: El proceso
+Peso: 0.4
+Autor: Franz Kafka
+
+Titulo: El ruido y la furia
+Peso: 0.4
+Autor: William Faulkner
+
+Titulo: El gato negro y otros cuentos
+Peso: 0.4
+Autor: Edgar Allan Poe
+
+Titulo: Ensayo sobre la ceguera
+Peso: 0.4
+Autor: Jose Saramago
+
+Titulo: Ulises
+Peso: 0.5
+Autor: James Joyce
+
+Titulo: El tango de la guardia vieja
+Peso: 0.4
+Autor: Arturo Perez-Reverte
+
+Titulo: Dracula
+Peso: 0.4
+Autor: Bram Stoker
+
+Titulo: La caida de los gigantes
+Peso: 0.4
+Autor: Ken Follett
+
+Titulo: Harry Potter y las reliquias de la muerte (Harry Potter 7)
+Peso: 0.4
+Autor: J. K. Rowling
+
+Titulo: Las aventuras de Tom Sawye
+Peso: 0.5
+Autor: Mark Twain
+
+Titulo: Dr. Jekyll y Mr. Hyde
+Peso: 0.5
+Autor: Robert Louis Stevenson
+
+Titulo: ATLAS ILUSTRADO - MATEMATICAS E INFORMATICA
+Peso: 1.5
+SKU: 46903     Ano: 2022     Vigencia: 1
+

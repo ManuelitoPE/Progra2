@@ -2,9 +2,9 @@
 #include "header/Libro.h"
 
 Libro::Libro() {
-    nombre = {};
+    nombre  = {};
     paginas = {};
-    peso = {};
+    peso    = {};
 }
 
 Libro::Libro(const Libro& orig) {
@@ -46,6 +46,20 @@ void Libro::operator=(const Libro& libro){
     char buffer[200];
     libro.GetNombre(buffer);
     this->SetNombre(buffer);
-    this->SetPaginas(libro.GetPaginas());
-    this->SetPeso(libro.GetPeso());
+    paginas = libro.GetPaginas();
+    peso    = libro.GetPeso();
+}
+
+void Libro::lee(ifstream& arch){
+    // Datos
+    char buffer[200];
+    arch.getline(buffer,200,',');
+    this->SetNombre(buffer);
+    arch>>paginas;  arch.ignore();
+    arch>>peso;     arch.ignore();
+}
+
+void Libro::imprime(ofstream& arch){
+    arch<<"Titulo: "<<nombre<<endl
+        <<"Peso: "<<peso<<endl;
 }

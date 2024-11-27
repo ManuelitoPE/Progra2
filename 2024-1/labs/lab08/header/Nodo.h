@@ -8,6 +8,7 @@ public:
     Nodo();
     Nodo(const Nodo& orig);
     virtual ~Nodo();
+    friend class Lista;
 private:
     Libro* plibro;
     Nodo* sig;
