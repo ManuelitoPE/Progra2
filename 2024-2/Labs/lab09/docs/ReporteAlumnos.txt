@@ -1,0 +1,7 @@
+100003 Ana 12 2023
+100007 Carlos 11 2022
+100006 Emily 12 Francia Universidad-de-Paris 4
+100001 Juan 16 2021
+100005 Luis 13 2020
+100004 Marco 18 Italia Universidad-de-Roma 12
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6

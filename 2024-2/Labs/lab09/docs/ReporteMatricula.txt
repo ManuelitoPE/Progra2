@@ -1,0 +1,70 @@
+101       Matemáticas Básicas            3         3         
+-----------------------------------------
+100003 Ana 12 2023
+100001 Juan 16 2021
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6
+100004 Marco 18 Italia Universidad-de-Roma 12
+-----------------------------------------
+102       Física General                  4         3         
+-----------------------------------------
+100006 Emily 12 Francia Universidad-de-Paris 4
+100005 Luis 13 2020
+100001 Juan 16 2021
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6
+-----------------------------------------
+103       Programación I                  2         3         
+-----------------------------------------
+100003 Ana 12 2023
+100006 Emily 12 Francia Universidad-de-Paris 4
+100001 Juan 16 2021
+100004 Marco 18 Italia Universidad-de-Roma 12
+-----------------------------------------
+104       Química Orgánica               3         3         
+-----------------------------------------
+100003 Ana 12 2023
+100006 Emily 12 Francia Universidad-de-Paris 4
+100005 Luis 13 2020
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6
+-----------------------------------------
+105       Historia Universal               2         3         
+-----------------------------------------
+100005 Luis 13 2020
+100001 Juan 16 2021
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6
+100004 Marco 18 Italia Universidad-de-Roma 12
+-----------------------------------------
+106       Ética Profesional               4         3         
+-----------------------------------------
+100003 Ana 12 2023
+100006 Emily 12 Francia Universidad-de-Paris 4
+100005 Luis 13 2020
+100004 Marco 18 Italia Universidad-de-Roma 12
+-----------------------------------------
+107       Microeconomía                   3         3         
+-----------------------------------------
+100006 Emily 12 Francia Universidad-de-Paris 4
+100001 Juan 16 2021
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6
+100004 Marco 18 Italia Universidad-de-Roma 12
+-----------------------------------------
+108       Introducción a la Filosofía    2         3         
+-----------------------------------------
+100003 Ana 12 2023
+100006 Emily 12 Francia Universidad-de-Paris 4
+100005 Luis 13 2020
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6
+-----------------------------------------
+109       Álgebra Lineal                  4         3         
+-----------------------------------------
+100003 Ana 12 2023
+100006 Emily 12 Francia Universidad-de-Paris 4
+100005 Luis 13 2020
+100001 Juan 16 2021
+-----------------------------------------
+110       Literatura Clásica              3         3         
+-----------------------------------------
+100006 Emily 12 Francia Universidad-de-Paris 4
+100005 Luis 13 2020
+100004 Marco 18 Italia Universidad-de-Roma 12
+100002 Sarah 18 Estados-Unidos Universidad-de-California 6
+-----------------------------------------
