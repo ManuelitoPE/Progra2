@@ -1,0 +1,10 @@
+001,Ensalada César,5.99,E,120
+002,Hamburguesa Clásica,8.50,S,200
+003,Pasta Carbonara,7.50,P,180
+004,Sopa de Tomate,4.00,S,90
+005,Filete de Pollo,10.00,C,140
+006,Pizza Margarita,9.99,P,230
+007,Sushi Roll,12.50,S,95
+008,Tacos de Carne,6.75,T,110
+009,Lasaña,8.75,P,85
+010,Paella,15.00,A,45

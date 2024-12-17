@@ -30,11 +30,11 @@ void lecturaDeLibrosPedido(ifstream& arch,char**& listaLibros);
 
 void agregarLibro(char*& libro,char* codigo);
 
-void agregarCliente(int**& pedidosClientes,int dniCliente,int numPedido);
+void agregarCliente(int**& pedidosClientes,int dniCliente,int numPedido,
+                    int& cantClientes);
 
-int buscarCliente(int** pedidosClientes,int dni);
+int buscarCliente(int** pedidosClientes,int dni,int cantClientes);
 
-int cantadorCleintes(int** pedidosClientes);
 //Incrementos
 void incrementar(char***& libros,int**& stock,int& capacidad,int& cantDatos);
 
@@ -45,8 +45,9 @@ void incrementar(char***& pedidosLibros,bool**& pedidosAtendidos,
 
 void incrementar(int* cliente);
 
-void incrementar(int**& pedidosClientes);
 
+void incrementar(int**& pedidosClientes,int& capacidadClientes,
+                 int& cantClientes);
 //Encabezados
 void encabezadoLibros(ofstream& report);
 

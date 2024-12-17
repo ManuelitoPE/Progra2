@@ -101,6 +101,7 @@ bool lecturaMenu(void*& producto,ifstream& arch){
     int *cantVentas = new int;
     double *precio = new double;
     bool *disponible = new bool;
+    tipo = new char;
     //Lectura
     code = lecturaExacta(arch,',');
     if(code == nullptr)return false;
@@ -119,12 +120,12 @@ bool lecturaMenu(void*& producto,ifstream& arch){
         cerr << "Error: no se pudo asignar memoria para el producto." << endl;
         return false;
     }
-    // infoProducto[MENU::CODIGO] = code;
-    // infoProducto[MENU::NOMBRE] = name;
-    // infoProducto[MENU::DESCRIPCION] = description;
-    // infoProducto[MENU::TIPO] = tipo;
-    // infoProducto[MENU::DISPONIBLE] = disponible;
-    // infoProducto[MENU::CANT_VENT] = cantVentas;
+    infoProducto[MENU::CODIGO] = code;
+    infoProducto[MENU::NOMBRE] = name;
+    infoProducto[MENU::DESCRIPCION] = description;
+    infoProducto[MENU::TIPO] = tipo;
+    infoProducto[MENU::DISPONIBLE] = disponible;
+    infoProducto[MENU::CANT_VENT] = cantVentas;
     return true;
 }
 //Ingresos

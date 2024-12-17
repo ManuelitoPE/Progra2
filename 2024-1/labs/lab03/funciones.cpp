@@ -62,11 +62,14 @@ void atencionDePedidos(const char* nomPedidos,char***& libros,
     pedidosLibros = nullptr; pedidosClientes = nullptr; pedidosAtendidos = nullptr;
     int numPedido,dniCliente;
     int cantDatos = 0,capacidad = 0;   
+    int cantClientes = 0, capacidadClientes = 0;
     while(true){
         arch>>numPedido;
         if(arch.eof())break;
         arch.ignore();  arch>>dniCliente;
-        agregarCliente(pedidosClientes,dniCliente,numPedido);
+        if(cantClientes==capacidad)
+            incrementar(pedidosClientes,capacidadClientes,cantClientes);
+        agregarCliente(pedidosClientes,dniCliente,numPedido,cantClientes);
         if(capacidad == cantDatos || numPedido>capacidad)
             incrementar(pedidosLibros,pedidosAtendidos,capacidad,
                         cantDatos,numPedido);
@@ -77,8 +80,7 @@ void atencionDePedidos(const char* nomPedidos,char***& libros,
         cantDatos++;
     } 
     ofstream reporte; aperturaArchEscritura(reporte,"docs/reportePrueba");
-    int cant = cantadorCleintes(pedidosClientes);
-    cout<<cant;
+   
 }
 void pruebaDeLecturaDeLibros(const char* nomReporte,char***& libros,
                     int**& stock){
@@ -131,20 +133,19 @@ void agregarLibro(char*& libro,char* codigo){
     libro = new char[strlen(codigo)+1];
     strcpy(libro,codigo);
 }
-void agregarCliente(int**& pedidosClientes,int dniCliente,int numPedido){
+void agregarCliente(int**& pedidosClientes,int dniCliente,int numPedido,
+                    int& cantClientes){
     //Datos
-    int posCliente = buscarCliente(pedidosClientes,dniCliente);
-    int cantClientes = cantadorCleintes(pedidosClientes);
+    int posCliente = buscarCliente(pedidosClientes,dniCliente,cantClientes);
     int* infoCliente, posPedido;
     if(posCliente==CLIENTE_NO_ENCONTRADO){
-        //Incrementar Clientes
-        incrementar(pedidosClientes);
         //Creamos espacio para los datos del cliente
-        pedidosClientes[cantClientes] = new int[3];
-        infoCliente = pedidosClientes[cantClientes];
+        pedidosClientes[cantClientes-1] = new int[3];
+        infoCliente = pedidosClientes[cantClientes-1];
         infoCliente[CLIENTE::_DNI] = dniCliente;
         infoCliente[CLIENTE::_CANT_PEDIDOS] = 1;
         infoCliente[CLIENTE::_PRIMER_PEDIDO] = numPedido;
+        cantClientes++;
     }else{
         //Incrementar Pedidos
         incrementar(pedidosClientes[posCliente]);
@@ -154,23 +155,15 @@ void agregarCliente(int**& pedidosClientes,int dniCliente,int numPedido){
         infoCliente[CLIENTE::_CANT_PEDIDOS]++;
     }
 }
-int buscarCliente(int** pedidosClientes,int dni){
+int buscarCliente(int** pedidosClientes,int dni,int cantClientes){
     //Datos
     int* infoCliente;
-    int cant = cantadorCleintes(pedidosClientes);
-    if(pedidosClientes==nullptr)return CLIENTE_NO_ENCONTRADO;
-    for (int i = 0; i<cant; i++){
+    for (int i = 0; i<cantClientes; i++){
         infoCliente = pedidosClientes[i];
+        if(infoCliente==nullptr)return CLIENTE_NO_ENCONTRADO;
         if(infoCliente[CLIENTE::_DNI]==dni)return i;
     }
     return CLIENTE_NO_ENCONTRADO;
-}
-int cantadorCleintes(int** pedidosClientes){
-    //Datos 
-    int cant = 0;
-    if(pedidosClientes==nullptr)return 0;
-    while (pedidosClientes[cant])cant++;
-    return cant;
 }
 //Incrementos 
 void incrementar(char***& libros,int**& stock,int& capacidad,
@@ -231,6 +224,21 @@ void incrementar(char***& pedidosLibros,bool**& pedidosAtendidos,
         pedidosAtendidos = auxPedidosAtendidos;
     }
 }
+void incrementar(int**& pedidosClientes,int& capacidadClientes,
+                 int& cantClientes){
+    //Incrementar
+    capacidadClientes+=INCREMENTO;
+    if(pedidosClientes==nullptr){
+        pedidosClientes = new int*[capacidadClientes]{};
+        cantClientes++;
+    }else{
+        int** auxPedidosClientes = new int*[capacidadClientes]{};
+        for (int i = 0; pedidosClientes[i]; i++)
+            auxPedidosClientes[i] = pedidosClientes[i];
+        delete pedidosClientes;
+        pedidosClientes = auxPedidosClientes;
+    }
+}
 void incrementar(int* cliente){
     //Se agrega espacio el dni,cantPedidos y el nuevo codigo
     int cant = cliente[CLIENTE::_CANT_PEDIDOS]+3;  
@@ -240,20 +248,7 @@ void incrementar(int* cliente){
     delete cliente;
     cliente = auxCliente;
 }  
-void incrementar(int**& pedidosClientes){
-    //Sumamos al nuevo cliente
-    int cantClientes = cantadorCleintes(pedidosClientes)+2;
-    if(pedidosClientes==nullptr){
-        pedidosClientes = new int*[cantClientes]{};
-    }else{
-        int** auxClientes = new int*[cantClientes]{};
-        for (int i = 0; i < cantClientes; i++)
-            auxClientes[i] = pedidosClientes[i];
-        delete pedidosClientes;
-        pedidosClientes = auxClientes;
 
-    }
-}
 //Encabezados
 void encabezadoLibros(ofstream& report){
     report<<setw(50)<<"REPORTE DE STOCK DE LIBROS"<<endl;

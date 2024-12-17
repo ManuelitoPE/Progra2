@@ -31,7 +31,7 @@ public:
     int getCreditos() const;
     bool leer(ifstream& arch);
     void imprimir(ofstream& arch);
-
+    //Para el map
     bool operator>(const Curso&) const;
     bool operator<(const Curso&) const;
 };
